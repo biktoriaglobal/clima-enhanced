@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold tracking-tight">
                 <span className="text-gradient">CLIMA</span>
-                <span className="text-accent">TRIX</span>
+                <span className="text-accent">TIC</span>
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -75,15 +75,6 @@ const Footer = () => {
                   +34 602 35 99 72
                 </a>
               </li>
-              <li>
-                <a
-                  href="mailto:info@climatrix.es"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
-                >
-                  <Mail size={16} />
-                  info@climatrix.es
-                </a>
-              </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <MapPin size={16} className="shrink-0 mt-0.5" />
                 Valencia, Costa Blanca, Marina Alta
@@ -95,7 +86,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Climatrix. Todos los derechos reservados.
+            © {currentYear} CLIMATIC. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">

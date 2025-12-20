@@ -8,12 +8,13 @@ import Zones from "@/components/Zones";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Climatrix - Instaladores de Aire Acondicionado en Valencia y Costa Blanca</title>
+        <title>CLIMATIC - Instaladores de Aire Acondicionado en Valencia y Costa Blanca</title>
         <meta
           name="description"
           content="Instalación profesional de aire acondicionado en Valencia, Costa Blanca y Marina Alta. Expertos en Daikin, Mitsubishi, Fujitsu. Presupuesto sin compromiso."
@@ -22,7 +23,7 @@ const Index = () => {
           name="keywords"
           content="aire acondicionado, instalación, Valencia, Costa Blanca, Denia, Javea, Calpe, Altea, Moraira, climatización"
         />
-        <link rel="canonical" href="https://climatrix.es" />
+        <link rel="canonical" href="https://climatic.es" />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -37,6 +38,7 @@ const Index = () => {
           <Contact />
         </main>
         <Footer />
+        <WhatsAppButton />
       </div>
     </>
   );
