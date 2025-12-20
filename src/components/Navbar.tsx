@@ -48,7 +48,7 @@ const Navbar = () => {
           </div>
           <span className="text-xl font-bold tracking-tight">
             <span className="text-gradient">CLIMA</span>
-            <span className="text-accent">TRIX</span>
+            <span className="text-accent">TIC</span>
           </span>
         </motion.a>
 
