@@ -57,9 +57,9 @@ const WhyChooseUs = () => {
               <span className="text-gradient">climatización</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              En Climatrix nos comprometemos a ofrecer un servicio de calidad
+              En CLIMATIC nos comprometemos a ofrecer un servicio de calidad
               superior. Somos expertos en instalación de aire acondicionado con
-              más de una década de experiencia en Valencia y la Costa Blanca.
+              5 años de experiencia en Valencia y la Costa Blanca.
             </p>
 
             {/* Stats */}
@@ -71,7 +71,7 @@ const WhyChooseUs = () => {
                 transition={{ delay: 0.2 }}
                 className="text-center"
               >
-                <div className="text-4xl font-bold text-gradient mb-2">10+</div>
+                <div className="text-4xl font-bold text-gradient mb-2">5+</div>
                 <div className="text-sm text-muted-foreground">Años experiencia</div>
               </motion.div>
               <motion.div
@@ -81,7 +81,7 @@ const WhyChooseUs = () => {
                 transition={{ delay: 0.3 }}
                 className="text-center"
               >
-                <div className="text-4xl font-bold text-gradient-accent mb-2">500+</div>
+                <div className="text-4xl font-bold text-gradient-accent mb-2">3000+</div>
                 <div className="text-sm text-muted-foreground">Instalaciones</div>
               </motion.div>
               <motion.div
