@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -85,16 +86,20 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm">
-            © {currentYear} CLIMATIC. Todos los derechos reservados.
-          </p>
+          <div className="text-muted-foreground text-sm text-center md:text-left">
+            <p>© {currentYear} CLIMATIC - Max Efficiency SL</p>
+            <p className="text-xs mt-1">Todos los derechos reservados.</p>
+          </div>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">
+            <Link to="/politica-privacidad" className="hover:text-primary transition-colors">
               Política de privacidad
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
+            </Link>
+            <Link to="/politica-cookies" className="hover:text-primary transition-colors">
+              Política de cookies
+            </Link>
+            <Link to="/aviso-legal" className="hover:text-primary transition-colors">
               Aviso legal
-            </a>
+            </Link>
           </div>
         </div>
       </div>
