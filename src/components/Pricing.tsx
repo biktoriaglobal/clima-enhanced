@@ -1,39 +1,61 @@
 import { motion } from "framer-motion";
-import { Check, Phone, Star, Flame } from "lucide-react";
+import { Check, Phone, Star, Flame, Wifi, Snowflake, Sun, Zap } from "lucide-react";
 import { Button } from "./ui/button";
 
-const brandColors: Record<string, { accent: string; accentLight: string; border: string; glow: string; text: string; bg: string }> = {
+const brandThemes: Record<string, {
+  gradient: string;
+  border: string;
+  glow: string;
+  text: string;
+  iconBg: string;
+  checkColor: string;
+  badgeBg: string;
+  priceShadow: string;
+  hoverBorder: string;
+}> = {
   FUJITSU: {
-    accent: "text-red-500",
-    accentLight: "bg-red-500/10",
-    border: "border-red-500/40 hover:border-red-500",
-    glow: "hover:shadow-[0_10px_30px_rgba(239,68,68,0.25)]",
-    text: "text-red-500",
-    bg: "bg-red-500",
+    gradient: "from-red-950/40 via-card to-red-950/20",
+    border: "border-red-500/30",
+    glow: "shadow-[0_0_0_1px_rgba(239,68,68,0.1)]",
+    text: "text-red-400",
+    iconBg: "bg-red-500/15",
+    checkColor: "text-red-400",
+    badgeBg: "bg-red-500",
+    priceShadow: "drop-shadow-[0_0_20px_rgba(239,68,68,0.5)]",
+    hoverBorder: "group-hover:border-red-500/70",
   },
   MITSUBISHI: {
-    accent: "text-red-600",
-    accentLight: "bg-red-600/10",
-    border: "border-red-600/40 hover:border-red-600",
-    glow: "hover:shadow-[0_10px_30px_rgba(220,38,38,0.25)]",
-    text: "text-red-600",
-    bg: "bg-red-600",
+    gradient: "from-rose-950/40 via-card to-rose-950/20",
+    border: "border-rose-500/30",
+    glow: "shadow-[0_0_0_1px_rgba(244,63,94,0.1)]",
+    text: "text-rose-400",
+    iconBg: "bg-rose-500/15",
+    checkColor: "text-rose-400",
+    badgeBg: "bg-rose-500",
+    priceShadow: "drop-shadow-[0_0_20px_rgba(244,63,94,0.5)]",
+    hoverBorder: "group-hover:border-rose-500/70",
   },
   GREE: {
-    accent: "text-emerald-500",
-    accentLight: "bg-emerald-500/10",
-    border: "border-emerald-500/40 hover:border-emerald-500",
-    glow: "hover:shadow-[0_10px_30px_rgba(16,185,129,0.25)]",
-    text: "text-emerald-500",
-    bg: "bg-emerald-500",
+    gradient: "from-emerald-950/40 via-card to-emerald-950/20",
+    border: "border-emerald-500/30",
+    glow: "shadow-[0_0_0_1px_rgba(16,185,129,0.1)]",
+    text: "text-emerald-400",
+    iconBg: "bg-emerald-500/15",
+    checkColor: "text-emerald-400",
+    badgeBg: "bg-emerald-500",
+    priceShadow: "drop-shadow-[0_0_20px_rgba(16,185,129,0.5)]",
+    hoverBorder: "group-hover:border-emerald-500/70",
   },
   DAIKIN: {
-    accent: "text-sky-500",
-    accentLight: "bg-sky-500/10",
-    border: "border-sky-500/40 hover:border-sky-500",
-    glow: "hover:shadow-[0_10px_30px_rgba(14,165,233,0.25)]",
-    text: "text-sky-500",
-    bg: "bg-sky-500",
+    gradient: "from-sky-950/40 via-card to-sky-950/20",
+    border: "border-sky-500/30",
+    glow: "shadow-[0_0_0_1px_rgba(14,165,233,0.1)]",
+    text: "text-sky-400",
+    iconBg: "bg-sky-500/15",
+    checkColor: "text-sky-400",
+    badgeBg: "bg-sky-500",
+    priceShadow: "drop-shadow-[0_0_20px_rgba(14,165,233,0.5)]",
+    hoverBorder: "group-hover:border-sky-500/70",
   },
 };
 
@@ -44,6 +66,7 @@ const offers = [
     oldPrice: "1.380",
     newPrice: "900",
     discount: "35%",
+    highlight: "Silencioso",
     features: [
       "Potencia frigorífica 3.5 kW",
       "Clase energética A++",
@@ -58,6 +81,7 @@ const offers = [
     oldPrice: "1.870",
     newPrice: "900",
     discount: "52%",
+    highlight: "Top ventas",
     features: [
       "Potencia frigorífica 3.5 kW",
       "Clase energética A+++",
@@ -72,6 +96,7 @@ const offers = [
     oldPrice: "840",
     newPrice: "700",
     discount: "17%",
+    highlight: "WiFi",
     features: [
       "Potencia frigorífica 3.5 kW",
       "Clase energética A++",
@@ -86,6 +111,7 @@ const offers = [
     oldPrice: "1.850",
     newPrice: "950",
     discount: "49%",
+    highlight: "Premium",
     features: [
       "Potencia frigorífica 3.5 kW",
       "Clase energética A++",
@@ -122,80 +148,124 @@ const Pricing = () => {
           </p>
         </motion.div>
 
-        {/* EKOKAI Featured Offer - Full width */}
+        {/* ═══════════════ EKOKAI HERO OFFER ═══════════════ */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
+          transition={{ duration: 0.7, type: "spring" }}
+          className="mb-16"
         >
-          <div className="relative p-8 md:p-10 rounded-3xl border-2 border-green-500 bg-gradient-to-br from-green-500/10 via-background to-green-500/5 shadow-[0_0_40px_rgba(34,197,94,0.15)] overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-green-400/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/4" />
+          <div className="relative rounded-3xl overflow-hidden">
+            {/* Animated border glow */}
+            <div className="absolute -inset-[2px] bg-gradient-to-r from-green-500 via-emerald-400 to-green-600 rounded-3xl animate-pulse-slow" />
+            
+            <div className="relative m-[2px] rounded-3xl bg-gradient-to-br from-green-950/60 via-background to-emerald-950/40 p-8 md:p-12 overflow-hidden">
+              {/* Decorative orbs */}
+              <div className="absolute top-0 right-0 w-80 h-80 bg-green-500/15 rounded-full blur-[100px]" />
+              <div className="absolute bottom-0 left-0 w-60 h-60 bg-emerald-400/10 rounded-full blur-[80px]" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-green-500/5 rounded-full blur-[120px]" />
 
-            {/* Badge */}
-            <div className="absolute top-4 right-4 md:top-6 md:right-6">
-              <span className="inline-flex items-center gap-1.5 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg shadow-green-500/30">
-                <Flame size={16} />
-                OFERTA ESTRELLA
-              </span>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
-              {/* Left - Info */}
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <Star className="text-green-500" size={24} fill="currentColor" />
-                  <span className="text-green-500 text-sm font-semibold tracking-wider uppercase">
-                    Mejor relación calidad-precio
-                  </span>
+              {/* Floating badge */}
+              <motion.div
+                initial={{ y: -20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="absolute top-4 right-4 md:top-8 md:right-8 z-20"
+              >
+                <div className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_20px_rgba(34,197,94,0.4)] animate-float">
+                  <Flame size={18} />
+                  OFERTA ESTRELLA
                 </div>
-                <h3 className="text-green-500 text-4xl md:text-5xl font-black tracking-wider mb-2">
-                  EKOKAI
-                </h3>
-                <p className="text-foreground text-lg font-medium mb-6">
-                  Modelo DPA35FGX con WiFi
-                </p>
+              </motion.div>
 
-                <div className="space-y-3">
-                  {[
-                    "Potencia: 2.752 kcal/h frío · 2.924 kcal/h calor",
-                    "Clase energética A++ frío / A+++ calor",
-                    "WiFi integrado",
-                    "Ideal para estancias de hasta 35 m²",
-                    "Instalación incluida",
-                  ].map((feature) => (
-                    <div key={feature} className="flex items-start gap-3 text-foreground">
-                      <Check className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
-                      <span>{feature}</span>
+              <div className="grid md:grid-cols-5 gap-8 items-center relative z-10">
+                {/* Left - Brand & Info (3 cols) */}
+                <div className="md:col-span-3">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="text-green-400" size={16} fill="currentColor" />
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </div>
+                    <span className="text-green-400/80 text-xs font-medium">Mejor relación calidad-precio</span>
+                  </div>
 
-              {/* Right - Price */}
-              <div className="text-center md:text-right">
-                <p className="text-muted-foreground text-lg line-through mb-2">840€</p>
-                <div className="relative inline-block">
-                  <p
-                    className="text-green-500 text-7xl md:text-8xl font-black mb-3"
-                    style={{ textShadow: "0 0 30px rgba(34,197,94,0.4)" }}
-                  >
-                    620€
+                  <h3 className="text-5xl md:text-6xl font-black tracking-wider text-green-400 mb-1" style={{ textShadow: "0 0 40px rgba(34,197,94,0.3)" }}>
+                    EKOKAI
+                  </h3>
+                  <p className="text-foreground/80 text-lg font-medium mb-8">
+                    Modelo DPA35FGX · WiFi integrado
                   </p>
+
+                  {/* Feature pills */}
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {[
+                      { icon: Snowflake, text: "2.752 kcal/h frío", sub: "A++" },
+                      { icon: Sun, text: "2.924 kcal/h calor", sub: "A+++" },
+                      { icon: Wifi, text: "WiFi integrado", sub: "Control remoto" },
+                      { icon: Zap, text: "Hasta 35 m²", sub: "Alta eficiencia" },
+                    ].map((feat) => (
+                      <motion.div
+                        key={feat.text}
+                        whileHover={{ scale: 1.03, y: -2 }}
+                        className="flex items-center gap-3 p-3 rounded-xl bg-green-500/10 border border-green-500/20"
+                      >
+                        <div className="w-9 h-9 rounded-lg bg-green-500/20 flex items-center justify-center shrink-0">
+                          <feat.icon className="text-green-400" size={18} />
+                        </div>
+                        <div>
+                          <p className="text-foreground text-sm font-semibold leading-tight">{feat.text}</p>
+                          <p className="text-green-400/70 text-xs">{feat.sub}</p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center gap-2 text-green-400/60 text-sm">
+                    <Check size={16} />
+                    <span>Instalación profesional incluida en el precio</span>
+                  </div>
                 </div>
-                <p className="text-muted-foreground text-sm mb-4">IVA no incluido · Instalación incluida</p>
-                <span className="inline-block bg-gradient-to-r from-green-600 to-green-500 text-white px-6 py-2 rounded-full text-lg font-bold shadow-lg shadow-green-500/30 mb-6">
-                  -26% AHORRA 220€
-                </span>
-                <div className="mt-4">
+
+                {/* Right - Price CTA (2 cols) */}
+                <div className="md:col-span-2 text-center">
+                  <p className="text-muted-foreground text-xl line-through mb-1">840€</p>
+                  
+                  <motion.div
+                    initial={{ scale: 0.8 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ type: "spring", stiffness: 200, delay: 0.4 }}
+                  >
+                    <p
+                      className="text-green-400 text-8xl md:text-9xl font-black leading-none mb-2"
+                      style={{ textShadow: "0 0 60px rgba(34,197,94,0.4), 0 0 120px rgba(34,197,94,0.15)" }}
+                    >
+                      620<span className="text-5xl md:text-6xl">€</span>
+                    </p>
+                  </motion.div>
+
+                  <p className="text-muted-foreground text-sm mb-3">IVA no incluido</p>
+
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="inline-block mb-6"
+                  >
+                    <span className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 rounded-full text-base font-bold shadow-lg">
+                      AHORRAS 220€
+                    </span>
+                  </motion.div>
+
                   <a href="tel:+34602359972" className="block">
-                    <Button size="lg" className="w-full md:w-auto gap-2 bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-6 shadow-lg shadow-green-500/30">
-                      <Phone size={20} />
-                      ¡Lo quiero!
-                    </Button>
+                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                      <Button size="lg" className="w-full gap-2 bg-green-500 hover:bg-green-400 text-white text-lg px-8 py-7 rounded-xl shadow-[0_8px_30px_rgba(34,197,94,0.35)] font-bold">
+                        <Phone size={22} />
+                        ¡Lo quiero! Llamar ahora
+                      </Button>
+                    </motion.div>
                   </a>
                 </div>
               </div>
@@ -203,53 +273,73 @@ const Pricing = () => {
           </div>
         </motion.div>
 
-        {/* Other brands grid */}
+        {/* ═══════════════ OTHER BRANDS ═══════════════ */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {offers.map((offer, index) => {
-            const colors = brandColors[offer.brand];
+            const t = brandThemes[offer.brand];
             return (
               <motion.div
                 key={offer.brand}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
                 className="group"
               >
-                <div className={`h-full p-6 rounded-2xl bg-gradient-card border-2 ${colors.border} ${colors.glow} transition-all duration-500 flex flex-col`}>
-                  {/* Brand logo */}
-                  <div className="h-16 flex items-center justify-center mb-4">
-                    <h3 className={`${colors.accent} text-2xl font-bold tracking-wider uppercase`}>
-                      {offer.brand}
-                    </h3>
-                  </div>
+                <div className={`relative h-full rounded-2xl bg-gradient-to-b ${t.gradient} border ${t.border} ${t.hoverBorder} ${t.glow} group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 overflow-hidden`}>
+                  {/* Top accent line */}
+                  <div className={`absolute top-0 left-0 right-0 h-1 ${t.badgeBg} opacity-60 group-hover:opacity-100 transition-opacity`} />
 
-                  {/* Model name */}
-                  <p className="text-foreground text-sm font-medium text-center mb-4 min-h-[60px] flex items-center justify-center">
-                    {offer.model}
-                  </p>
-
-                  {/* Features */}
-                  <div className={`${colors.accentLight} rounded-lg p-4 mb-4 flex-grow`}>
-                    {offer.features.map((feature) => (
-                      <div key={feature} className="flex items-start gap-2 text-sm text-foreground mb-2">
-                        <Check className={`w-4 h-4 ${colors.accent} shrink-0 mt-0.5`} />
-                        <span>{feature}</span>
+                  <div className="p-6 flex flex-col h-full">
+                    {/* Highlight badge */}
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className={`${t.text} text-2xl font-black tracking-wider`}>
+                          {offer.brand}
+                        </h3>
+                        <p className="text-muted-foreground text-xs mt-1">{offer.model}</p>
                       </div>
-                    ))}
-                  </div>
+                      <span className={`${t.badgeBg} text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider`}>
+                        {offer.highlight}
+                      </span>
+                    </div>
 
-                  {/* Price section */}
-                  <div className="text-center">
-                    <p className="text-destructive text-lg line-through mb-1">
-                      {offer.oldPrice}€
-                    </p>
-                    <p className={`${colors.accent} text-4xl font-bold mb-2`}>
-                      {offer.newPrice}€
-                    </p>
-                    <span className={`inline-block ${colors.bg} text-white px-4 py-1 rounded-full text-sm font-bold`}>
-                      -{offer.discount} OFERTA
-                    </span>
+                    {/* Discount strip */}
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      className={`${t.iconBg} rounded-xl p-3 mb-4 text-center border border-transparent group-hover:border-current/10 transition-all`}
+                    >
+                      <span className="text-muted-foreground text-sm line-through">{offer.oldPrice}€</span>
+                      <p className={`${t.text} text-5xl font-black my-1 ${t.priceShadow}`}>
+                        {offer.newPrice}<span className="text-2xl">€</span>
+                      </p>
+                      <span className={`inline-block ${t.badgeBg} text-white px-3 py-0.5 rounded-full text-xs font-bold`}>
+                        -{offer.discount}
+                      </span>
+                    </motion.div>
+
+                    {/* Features */}
+                    <div className="flex-grow space-y-2.5 mb-5">
+                      {offer.features.map((feature) => (
+                        <div key={feature} className="flex items-start gap-2.5">
+                          <div className={`w-4 h-4 rounded-full ${t.iconBg} flex items-center justify-center shrink-0 mt-0.5`}>
+                            <Check className={`w-2.5 h-2.5 ${t.checkColor}`} />
+                          </div>
+                          <span className="text-foreground/80 text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
+                    <a href="tel:+34602359972" className="block">
+                      <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                        <Button variant="outline" size="lg" className={`w-full gap-2 border-current/20 hover:${t.badgeBg} hover:text-white transition-all duration-300 ${t.text}`}>
+                          <Phone size={16} />
+                          Pedir presupuesto
+                        </Button>
+                      </motion.div>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -257,7 +347,7 @@ const Pricing = () => {
           })}
         </div>
 
-        {/* Services pricing */}
+        {/* ═══════════════ SERVICES ═══════════════ */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
