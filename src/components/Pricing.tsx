@@ -32,6 +32,20 @@ const offers = [
     ],
   },
   {
+    brand: "EKOKAI",
+    model: "DPA35FGX",
+    oldPrice: "840",
+    newPrice: "620",
+    discount: "26%",
+    features: [
+      "Potencia: 2.752 kcal/h frío · 2.924 kcal/h calor",
+      "Clase energética A++ frío / A+++ calor",
+      "WiFi integrado",
+      "Ideal hasta 35 m²",
+      "Instalación incluida",
+    ],
+  },
+  {
     brand: "GREE",
     model: "Pular 12",
     oldPrice: "840",
