@@ -12,50 +12,60 @@ const brandThemes: Record<string, {
   badgeBg: string;
   priceShadow: string;
   hoverBorder: string;
+  emoji: string;
+  tagline: string;
 }> = {
   FUJITSU: {
-    gradient: "from-red-950/40 via-card to-red-950/20",
-    border: "border-red-500/30",
-    glow: "shadow-[0_0_0_1px_rgba(239,68,68,0.1)]",
-    text: "text-red-400",
-    iconBg: "bg-red-500/15",
-    checkColor: "text-red-400",
-    badgeBg: "bg-red-500",
-    priceShadow: "drop-shadow-[0_0_20px_rgba(239,68,68,0.5)]",
-    hoverBorder: "group-hover:border-red-500/70",
+    gradient: "from-orange-950/50 via-card to-amber-950/30",
+    border: "border-orange-500/30",
+    glow: "shadow-[0_0_0_1px_rgba(249,115,22,0.1)]",
+    text: "text-orange-400",
+    iconBg: "bg-orange-500/15",
+    checkColor: "text-orange-400",
+    badgeBg: "bg-gradient-to-r from-orange-500 to-amber-500",
+    priceShadow: "drop-shadow-[0_0_20px_rgba(249,115,22,0.5)]",
+    hoverBorder: "group-hover:border-orange-500/70",
+    emoji: "🇯🇵",
+    tagline: "Tecnología japonesa",
   },
   MITSUBISHI: {
-    gradient: "from-rose-950/40 via-card to-rose-950/20",
-    border: "border-rose-500/30",
-    glow: "shadow-[0_0_0_1px_rgba(244,63,94,0.1)]",
-    text: "text-rose-400",
-    iconBg: "bg-rose-500/15",
-    checkColor: "text-rose-400",
-    badgeBg: "bg-rose-500",
-    priceShadow: "drop-shadow-[0_0_20px_rgba(244,63,94,0.5)]",
-    hoverBorder: "group-hover:border-rose-500/70",
+    gradient: "from-amber-950/50 via-card to-yellow-950/30",
+    border: "border-amber-500/30",
+    glow: "shadow-[0_0_0_1px_rgba(245,158,11,0.1)]",
+    text: "text-amber-400",
+    iconBg: "bg-amber-500/15",
+    checkColor: "text-amber-400",
+    badgeBg: "bg-gradient-to-r from-amber-500 to-yellow-500",
+    priceShadow: "drop-shadow-[0_0_20px_rgba(245,158,11,0.5)]",
+    hoverBorder: "group-hover:border-amber-500/70",
+    emoji: "⚡",
+    tagline: "Hyper Inverter",
   },
   GREE: {
-    gradient: "from-emerald-950/40 via-card to-emerald-950/20",
-    border: "border-emerald-500/30",
-    glow: "shadow-[0_0_0_1px_rgba(16,185,129,0.1)]",
-    text: "text-emerald-400",
-    iconBg: "bg-emerald-500/15",
-    checkColor: "text-emerald-400",
-    badgeBg: "bg-emerald-500",
-    priceShadow: "drop-shadow-[0_0_20px_rgba(16,185,129,0.5)]",
-    hoverBorder: "group-hover:border-emerald-500/70",
+    gradient: "from-yellow-950/50 via-card to-orange-950/30",
+    border: "border-yellow-500/30",
+    glow: "shadow-[0_0_0_1px_rgba(234,179,8,0.1)]",
+    text: "text-yellow-400",
+    iconBg: "bg-yellow-500/15",
+    checkColor: "text-yellow-400",
+    badgeBg: "bg-gradient-to-r from-yellow-500 to-orange-400",
+    priceShadow: "drop-shadow-[0_0_20px_rgba(234,179,8,0.5)]",
+    hoverBorder: "group-hover:border-yellow-500/70",
+    emoji: "📶",
+    tagline: "WiFi integrado",
   },
   DAIKIN: {
-    gradient: "from-sky-950/40 via-card to-sky-950/20",
-    border: "border-sky-500/30",
-    glow: "shadow-[0_0_0_1px_rgba(14,165,233,0.1)]",
-    text: "text-sky-400",
-    iconBg: "bg-sky-500/15",
-    checkColor: "text-sky-400",
-    badgeBg: "bg-sky-500",
-    priceShadow: "drop-shadow-[0_0_20px_rgba(14,165,233,0.5)]",
-    hoverBorder: "group-hover:border-sky-500/70",
+    gradient: "from-amber-950/50 via-card to-orange-950/30",
+    border: "border-amber-400/30",
+    glow: "shadow-[0_0_0_1px_rgba(251,191,36,0.1)]",
+    text: "text-amber-300",
+    iconBg: "bg-amber-400/15",
+    checkColor: "text-amber-300",
+    badgeBg: "bg-gradient-to-r from-amber-400 to-orange-500",
+    priceShadow: "drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]",
+    hoverBorder: "group-hover:border-amber-400/70",
+    emoji: "👑",
+    tagline: "Calidad Premium",
   },
 };
 
@@ -292,18 +302,22 @@ const Pricing = () => {
                   <div className={`absolute top-0 left-0 right-0 h-1 ${t.badgeBg} opacity-60 group-hover:opacity-100 transition-opacity`} />
 
                   <div className="p-6 flex flex-col h-full">
-                    {/* Highlight badge */}
+                    {/* Brand header with emoji */}
                     <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h3 className={`${t.text} text-2xl font-black tracking-wider`}>
-                          {offer.brand}
-                        </h3>
-                        <p className="text-muted-foreground text-xs mt-1">{offer.model}</p>
+                      <div className="flex items-center gap-3">
+                        <span className="text-3xl">{t.emoji}</span>
+                        <div>
+                          <h3 className={`${t.text} text-2xl font-black tracking-wider`}>
+                            {offer.brand}
+                          </h3>
+                          <p className="text-muted-foreground text-[11px] mt-0.5">{t.tagline}</p>
+                        </div>
                       </div>
-                      <span className={`${t.badgeBg} text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider`}>
+                      <span className={`${t.badgeBg} text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-lg`}>
                         {offer.highlight}
                       </span>
                     </div>
+                    <p className="text-muted-foreground/60 text-xs mb-3">{offer.model}</p>
 
                     {/* Discount strip */}
                     <motion.div
