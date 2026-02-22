@@ -3,6 +3,7 @@ import { Phone, MessageCircle, MapPin, Clock, Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,24 +27,28 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Construir mensaje de WhatsApp
-    const mensaje = `¡Hola! Me gustaría solicitar información:%0A%0A*Nombre:* ${formData.nombre} ${formData.apellidos}%0A*Teléfono:* ${formData.telefono}%0A*Población:* ${formData.poblacion}%0A*Servicio:* ${formData.tipoServicio}%0A*Mensaje:* ${formData.mensaje}`;
-    
-    // Abrir WhatsApp con el mensaje
-    window.open(`https://api.whatsapp.com/send/?phone=34603140026&text=${mensaje}&type=phone_number&app_absent=0`, "_blank");
-    
-    toast.success("¡Redirigiendo a WhatsApp!");
-    setIsSubmitting(false);
-    
-    // Limpiar formulario
-    setFormData({
-      nombre: "",
-      apellidos: "",
-      telefono: "",
-      poblacion: "",
-      tipoServicio: "",
-      mensaje: "",
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast.success("¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.");
+      setFormData({
+        nombre: "",
+        apellidos: "",
+        telefono: "",
+        poblacion: "",
+        tipoServicio: "",
+        mensaje: "",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Error al enviar el mensaje. Inténtalo de nuevo o contacta por WhatsApp.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -189,7 +194,7 @@ const Contact = () => {
                 disabled={isSubmitting}
               >
                 <Send size={20} />
-                {isSubmitting ? "Enviando..." : "Enviar por WhatsApp"}
+                {isSubmitting ? "Enviando..." : "Enviar solicitud"}
               </Button>
             </form>
           </motion.div>
