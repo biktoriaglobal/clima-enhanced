@@ -30,7 +30,7 @@ const Contact = () => {
     const mensaje = `¡Hola! Me gustaría solicitar información:%0A%0A*Nombre:* ${formData.nombre} ${formData.apellidos}%0A*Teléfono:* ${formData.telefono}%0A*Población:* ${formData.poblacion}%0A*Servicio:* ${formData.tipoServicio}%0A*Mensaje:* ${formData.mensaje}`;
     
     // Abrir WhatsApp con el mensaje
-    window.open(`https://wa.me/602359972?text=${mensaje}`, "_blank");
+    window.open(`https://api.whatsapp.com/send/?phone=34603140026&text=${mensaje}&type=phone_number&app_absent=0`, "_blank");
     
     toast.success("¡Redirigiendo a WhatsApp!");
     setIsSubmitting(false);
@@ -204,7 +204,7 @@ const Contact = () => {
           >
             {/* Contact methods */}
             <motion.a
-              href="tel:+34602359972"
+              href="tel:+34603140026"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -216,12 +216,12 @@ const Contact = () => {
               </div>
               <div>
                 <div className="text-sm text-muted-foreground mb-1">Llámanos</div>
-                <div className="text-xl font-semibold">+34 602 35 99 72</div>
+                <div className="text-xl font-semibold">+34 603 14 00 26</div>
               </div>
             </motion.a>
 
             <motion.a
-              href="https://wa.me/602359972"
+              href="https://api.whatsapp.com/send/?phone=34603140026&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
