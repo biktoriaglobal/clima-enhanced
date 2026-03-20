@@ -54,6 +54,7 @@ const Index = () => {
           <RiteCertification />
           <Zones />
           <Pricing />
+          <FAQ />
           <Contact />
         </main>
         <Footer />
