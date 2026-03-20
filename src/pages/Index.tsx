@@ -7,6 +7,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import RiteCertification from "@/components/RiteCertification";
 import Zones from "@/components/Zones";
 import Pricing from "@/components/Pricing";
+import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -22,9 +23,25 @@ const Index = () => {
         />
         <meta
           name="keywords"
-          content="aire acondicionado, instalación, Valencia, Costa Blanca, Denia, Javea, Calpe, Altea, Moraira, climatización"
+          content="aire acondicionado Valencia, instalación aire acondicionado Gandía, climatización Torrent, aire acondicionado Dénia, instaladores RITE Valencia, aire acondicionado Jávea, Sagunto, Paterna, Alzira, Cullera, Oliva, Xàtiva, Ontinyent, Benidorm, Altea, Moraira, Ondara, Costa Blanca, Marina Alta"
         />
         <link rel="canonical" href="https://climatic.es" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "CLIMATIC - Max Efficiency SL",
+            "description": "Instaladores autorizados de aire acondicionado con carnet RITE en Valencia, Costa Blanca y Marina Alta.",
+            "telephone": "+34603140026",
+            "email": "info@max-efficiency.es",
+            "areaServed": [
+              "Valencia", "Gandía", "Torrent", "Sagunto", "Paterna", "Alzira", "Dénia", "Jávea",
+              "Benissa", "Ondara", "Moraira", "Teulada", "Altea", "Cullera", "Oliva", "Xàtiva"
+            ],
+            "serviceType": ["Instalación de aire acondicionado", "Mantenimiento de aire acondicionado", "Recarga de gas R32 y 410A"],
+            "priceRange": "€€"
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -37,6 +54,7 @@ const Index = () => {
           <RiteCertification />
           <Zones />
           <Pricing />
+          <FAQ />
           <Contact />
         </main>
         <Footer />
