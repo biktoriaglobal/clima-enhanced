@@ -44,6 +44,7 @@ const Footer = () => {
                 { name: "Marcas", href: "#marcas" },
                 { name: "Por qué elegirnos", href: "#por-que" },
                 { name: "Zonas de servicio", href: "#zonas" },
+                { name: "Aire acondicionado por ciudades", href: "/instalacion-aire-acondicionado", isRoute: true },
                 { name: "Contacto", href: "#contacto" },
               ].map((link) => (
                 <li key={link.name}>
