@@ -400,6 +400,7 @@ const Pricing = () => {
             </div>
             <p className="text-muted-foreground text-sm mb-4">Instalación profesional incluida</p>
             <div className="mb-4">
+              <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">Desde </span>
               <span className="text-4xl font-bold text-gradient">250€</span>
               <span className="text-muted-foreground text-sm ml-2">IVA no incluido</span>
             </div>
