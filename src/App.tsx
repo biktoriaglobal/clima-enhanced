@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import AvisoLegal from "./pages/AvisoLegal";
 import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
 import PoliticaCookies from "./pages/PoliticaCookies";
+import InstalacionAireAcondicionado from "./pages/InstalacionAireAcondicionado";
 import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,8 @@ const App = () => (
           <CookieBanner />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/instalacion-aire-acondicionado" element={<InstalacionAireAcondicionado />} />
+            <Route path="/instalacion-aire-acondicionado/:ciudad" element={<InstalacionAireAcondicionado />} />
             <Route path="/aviso-legal" element={<AvisoLegal />} />
             <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
             <Route path="/politica-cookies" element={<PoliticaCookies />} />
