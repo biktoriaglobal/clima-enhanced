@@ -44,15 +44,25 @@ const Footer = () => {
                 { name: "Marcas", href: "#marcas" },
                 { name: "Por qué elegirnos", href: "#por-que" },
                 { name: "Zonas de servicio", href: "#zonas" },
+                { name: "Aire acondicionado por ciudades", href: "/instalacion-aire-acondicionado", isRoute: true },
                 { name: "Contacto", href: "#contacto" },
               ].map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                  >
-                    {link.name}
-                  </a>
+                  {(link as any).isRoute ? (
+                    <Link
+                      to={link.href}
+                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    >
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
