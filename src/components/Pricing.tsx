@@ -184,9 +184,9 @@ const Pricing = () => {
                 transition={{ delay: 0.3 }}
                 className="absolute top-4 right-4 md:top-8 md:right-8 z-20"
               >
-                <div className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_20px_rgba(34,197,94,0.4)] animate-float">
+                <div className="flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_20px_rgba(220,38,38,0.4)]">
                   <Flame size={18} />
-                  OFERTA ESTRELLA
+                  AGOTADO
                 </div>
               </motion.div>
 
