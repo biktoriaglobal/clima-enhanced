@@ -264,19 +264,20 @@ const Pricing = () => {
                     whileTap={{ scale: 0.98 }}
                     className="inline-block mb-6"
                   >
-                    <span className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 rounded-full text-base font-bold shadow-lg">
-                      AHORRAS 220€
+                    <span className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 rounded-full text-base font-bold shadow-lg uppercase tracking-wide">
+                      Sin stock actualmente
                     </span>
                   </motion.div>
 
-                  <a href="https://api.whatsapp.com/send/?phone=34602359972&text=%C2%A1Hola!%20Me%20interesa%20el%20Ekokai%20DPA35FGX&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="block">
-                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                      <Button size="lg" className="w-full gap-2 bg-green-500 hover:bg-green-400 text-white text-lg px-8 py-7 rounded-xl shadow-[0_8px_30px_rgba(34,197,94,0.35)] font-bold">
-                        <MessageCircle size={22} />
-                        ¡Lo quiero! WhatsApp
-                      </Button>
-                    </motion.div>
-                  </a>
+                  <Button
+                    size="lg"
+                    disabled
+                    className="w-full gap-2 bg-muted text-muted-foreground text-lg px-8 py-7 rounded-xl font-bold cursor-not-allowed opacity-70"
+                  >
+                    <MessageCircle size={22} />
+                    No disponible
+                  </Button>
+                  <p className="text-muted-foreground text-xs mt-3">Consulta otras marcas disponibles más abajo</p>
                 </div>
               </div>
             </div>
