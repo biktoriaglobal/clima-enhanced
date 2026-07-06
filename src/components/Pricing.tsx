@@ -74,8 +74,8 @@ const offers = [
     brand: "FUJITSU",
     model: "ASY35",
     oldPrice: "1.380",
-    newPrice: "900",
-    discount: "35%",
+    newPrice: "950",
+    discount: "31%",
     highlight: "Silencioso",
     features: [
       "Potencia frigorífica 3.5 kW",
@@ -89,8 +89,8 @@ const offers = [
     brand: "MITSUBISHI",
     model: "MSZ-HR35VF",
     oldPrice: "1.870",
-    newPrice: "900",
-    discount: "52%",
+    newPrice: "950",
+    discount: "49%",
     highlight: "Top ventas",
     features: [
       "Potencia frigorífica 3.5 kW",
@@ -104,8 +104,8 @@ const offers = [
     brand: "GREE",
     model: "Pular 12",
     oldPrice: "840",
-    newPrice: "700",
-    discount: "17%",
+    newPrice: "750",
+    discount: "11%",
     highlight: "WiFi",
     features: [
       "Potencia frigorífica 3.5 kW",
@@ -119,8 +119,8 @@ const offers = [
     brand: "DAIKIN",
     model: "Sensira FTXF35C",
     oldPrice: "1.850",
-    newPrice: "950",
-    discount: "49%",
+    newPrice: "1.000",
+    discount: "46%",
     highlight: "Premium",
     features: [
       "Potencia frigorífica 3.5 kW",
@@ -184,9 +184,9 @@ const Pricing = () => {
                 transition={{ delay: 0.3 }}
                 className="absolute top-4 right-4 md:top-8 md:right-8 z-20"
               >
-                <div className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_20px_rgba(34,197,94,0.4)] animate-float">
+                <div className="flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_20px_rgba(220,38,38,0.4)]">
                   <Flame size={18} />
-                  OFERTA ESTRELLA
+                  AGOTADO
                 </div>
               </motion.div>
 
@@ -264,19 +264,20 @@ const Pricing = () => {
                     whileTap={{ scale: 0.98 }}
                     className="inline-block mb-6"
                   >
-                    <span className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 rounded-full text-base font-bold shadow-lg">
-                      AHORRAS 220€
+                    <span className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 rounded-full text-base font-bold shadow-lg uppercase tracking-wide">
+                      Sin stock actualmente
                     </span>
                   </motion.div>
 
-                  <a href="https://api.whatsapp.com/send/?phone=34602359972&text=%C2%A1Hola!%20Me%20interesa%20el%20Ekokai%20DPA35FGX&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="block">
-                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                      <Button size="lg" className="w-full gap-2 bg-green-500 hover:bg-green-400 text-white text-lg px-8 py-7 rounded-xl shadow-[0_8px_30px_rgba(34,197,94,0.35)] font-bold">
-                        <MessageCircle size={22} />
-                        ¡Lo quiero! WhatsApp
-                      </Button>
-                    </motion.div>
-                  </a>
+                  <Button
+                    size="lg"
+                    disabled
+                    className="w-full gap-2 bg-muted text-muted-foreground text-lg px-8 py-7 rounded-xl font-bold cursor-not-allowed opacity-70"
+                  >
+                    <MessageCircle size={22} />
+                    No disponible
+                  </Button>
+                  <p className="text-muted-foreground text-xs mt-3">Consulta otras marcas disponibles más abajo</p>
                 </div>
               </div>
             </div>
