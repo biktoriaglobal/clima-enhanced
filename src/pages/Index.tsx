@@ -8,6 +8,7 @@ import RiteCertification from "@/components/RiteCertification";
 import Zones from "@/components/Zones";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -54,6 +55,7 @@ const Index = () => {
           <RiteCertification />
           <Zones />
           <Pricing />
+          <Testimonials />
           <FAQ />
           <Contact />
         </main>
