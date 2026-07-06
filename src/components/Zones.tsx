@@ -112,7 +112,7 @@ const Zones = () => {
         >
           ¿No encuentras tu localidad?{" "}
           <a
-            href="tel:+34603140026"
+            href="tel:+34602359972"
             className="text-primary hover:underline font-medium"
           >
             Contáctanos

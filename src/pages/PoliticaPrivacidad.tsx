@@ -30,7 +30,7 @@ const PoliticaPrivacidad = () => {
               </h2>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <strong className="text-foreground">Identidad:</strong> Max Efficiency SL
+                  <strong className="text-foreground">Identidad:</strong> CLIMATIC
                 </li>
                 <li>
                   <strong className="text-foreground">Nombre comercial:</strong> CLIMATIC
@@ -39,7 +39,7 @@ const PoliticaPrivacidad = () => {
                   <strong className="text-foreground">Dirección:</strong> Valencia, España
                 </li>
                 <li>
-                  <strong className="text-foreground">Teléfono:</strong> +34 603 14 00 26
+                  <strong className="text-foreground">Teléfono:</strong> +34 602 35 99 72
                 </li>
               </ul>
             </section>
@@ -49,7 +49,7 @@ const PoliticaPrivacidad = () => {
                 2. Finalidad del tratamiento de datos
               </h2>
               <p>
-                En Max Efficiency SL tratamos la información que nos facilitan
+                En CLIMATIC tratamos la información que nos facilitan
                 las personas interesadas con los siguientes fines:
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
@@ -101,7 +101,7 @@ const PoliticaPrivacidad = () => {
               </h2>
               <p>
                 Cualquier persona tiene derecho a obtener confirmación sobre si en
-                Max Efficiency SL estamos tratando datos personales que les
+                CLIMATIC estamos tratando datos personales que les
                 conciernan. Las personas interesadas tienen derecho a:
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
@@ -114,7 +114,7 @@ const PoliticaPrivacidad = () => {
               </ul>
               <p className="mt-4">
                 Para ejercer estos derechos, puede contactar con nosotros a través
-                del teléfono +34 603 14 00 26.
+                del teléfono +34 602 35 99 72.
               </p>
             </section>
 
@@ -123,7 +123,7 @@ const PoliticaPrivacidad = () => {
                 7. Seguridad de los datos
               </h2>
               <p>
-                Max Efficiency SL ha adoptado las medidas de seguridad técnicas y
+                CLIMATIC ha adoptado las medidas de seguridad técnicas y
                 organizativas necesarias para garantizar la seguridad de los datos
                 de carácter personal y evitar su alteración, pérdida, tratamiento
                 o acceso no autorizado.

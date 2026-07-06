@@ -98,7 +98,7 @@ const PoliticaCookies = () => {
                 4. Actualización de la política de cookies
               </h2>
               <p>
-                Max Efficiency SL puede modificar esta Política de Cookies en
+                CLIMATIC puede modificar esta Política de Cookies en
                 función de exigencias legislativas, reglamentarias, o con la
                 finalidad de adaptar dicha política a las instrucciones dictadas
                 por la Agencia Española de Protección de Datos.
@@ -111,7 +111,7 @@ const PoliticaCookies = () => {
               </h2>
               <p>
                 Si tiene cualquier duda sobre esta Política de Cookies, puede
-                contactar con nosotros a través del teléfono +34 603 14 00 26.
+                contactar con nosotros a través del teléfono +34 602 35 99 72.
               </p>
             </section>
           </div>

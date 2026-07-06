@@ -127,7 +127,7 @@ const InstalacionAireAcondicionado = () => {
   // Individual city page
   const cityName = fromSlug(ciudad);
   const data = locationData[ciudad] || { region: "Comunidad Valenciana", nearby: ["Valencia", "Gandía"] };
-  const whatsappUrl = `https://api.whatsapp.com/send/?phone=34603140026&text=${encodeURIComponent(`¡Hola! Me interesa instalar aire acondicionado en ${cityName}`)}&type=phone_number&app_absent=0`;
+  const whatsappUrl = `https://api.whatsapp.com/send/?phone=34602359972&text=${encodeURIComponent(`¡Hola! Me interesa instalar aire acondicionado en ${cityName}`)}&type=phone_number&app_absent=0`;
 
   const services = [
     { icon: ThermometerSun, title: "Instalación Split y Multisplit", desc: `Instalación profesional de aire acondicionado Split y Multisplit en ${cityName}. Primeras marcas como Daikin, Mitsubishi, Fujitsu y Gree.` },
@@ -139,7 +139,7 @@ const InstalacionAireAcondicionado = () => {
     <>
       <Helmet>
         <title>Instalación Aire Acondicionado en {cityName} | Instaladores RITE | CLIMATIC</title>
-        <meta name="description" content={`Instalación profesional de aire acondicionado en ${cityName} (${data.region}). Instaladores autorizados con carnet RITE. Daikin, Mitsubishi, Fujitsu. Presupuesto gratis ☎ 603 14 00 26`} />
+        <meta name="description" content={`Instalación profesional de aire acondicionado en ${cityName} (${data.region}). Instaladores autorizados con carnet RITE. Daikin, Mitsubishi, Fujitsu. Presupuesto gratis ☎ 602 35 99 72`} />
         <meta name="keywords" content={`aire acondicionado ${cityName}, instalación aire acondicionado ${cityName}, instalador aire acondicionado ${cityName}, mantenimiento aire acondicionado ${cityName}, RITE ${cityName}, climatización ${cityName}`} />
         <link rel="canonical" href={`https://climatic.es/instalacion-aire-acondicionado/${ciudad}`} />
         <script type="application/ld+json">
@@ -148,7 +148,7 @@ const InstalacionAireAcondicionado = () => {
             "@type": "LocalBusiness",
             "name": `CLIMATIC - Aire Acondicionado en ${cityName}`,
             "description": `Instaladores autorizados de aire acondicionado con carnet RITE en ${cityName}. Instalación, mantenimiento y recarga de gas.`,
-            "telephone": "+34603140026",
+            "telephone": "+34602359972",
             "email": "info@max-efficiency.es",
             "areaServed": { "@type": "City", "name": cityName },
             "serviceType": ["Instalación de aire acondicionado", "Mantenimiento de aire acondicionado", "Recarga de gas R32 y R410A"],
@@ -181,10 +181,10 @@ const InstalacionAireAcondicionado = () => {
                     Pedir presupuesto gratis
                   </Button>
                 </a>
-                <a href="tel:+34603140026">
+                <a href="tel:+34602359972">
                   <Button variant="outline" size="lg" className="gap-2">
                     <Phone size={20} />
-                    603 14 00 26
+                    602 35 99 72
                   </Button>
                 </a>
               </div>

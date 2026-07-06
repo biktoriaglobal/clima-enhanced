@@ -30,9 +30,9 @@ const Index = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "CLIMATIC - Max Efficiency SL",
+            "name": "CLIMATIC - CLIMATIC",
             "description": "Instaladores autorizados de aire acondicionado con carnet RITE en Valencia, Costa Blanca y Marina Alta.",
-            "telephone": "+34603140026",
+            "telephone": "+34602359972",
             "email": "info@max-efficiency.es",
             "areaServed": [
               "Valencia", "Gandía", "Torrent", "Sagunto", "Paterna", "Alzira", "Dénia", "Jávea",
