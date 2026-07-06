@@ -79,11 +79,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+34603140026"
+                  href="tel:+34602359972"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   <Phone size={16} />
-                  +34 603 14 00 26
+                  +34 602 35 99 72
                 </a>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
@@ -97,7 +97,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-muted-foreground text-sm text-center md:text-left">
-            <p>© {currentYear} CLIMATIC - Max Efficiency SL</p>
+            <p>© {currentYear} CLIMATIC - CLIMATIC</p>
             <p className="text-xs mt-1">Todos los derechos reservados.</p>
           </div>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">

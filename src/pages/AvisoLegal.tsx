@@ -36,7 +36,7 @@ const AvisoLegal = () => {
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>
-                  <strong className="text-foreground">Denominación social:</strong> Max Efficiency SL
+                  <strong className="text-foreground">Denominación social:</strong> CLIMATIC
                 </li>
                 <li>
                   <strong className="text-foreground">Nombre comercial:</strong> CLIMATIC
@@ -45,7 +45,7 @@ const AvisoLegal = () => {
                   <strong className="text-foreground">Domicilio:</strong> Valencia, España
                 </li>
                 <li>
-                  <strong className="text-foreground">Teléfono:</strong> +34 603 14 00 26
+                  <strong className="text-foreground">Teléfono:</strong> +34 602 35 99 72
                 </li>
                 <li>
                   <strong className="text-foreground">Actividad:</strong> Instalación y mantenimiento de sistemas de aire acondicionado
@@ -59,7 +59,7 @@ const AvisoLegal = () => {
               </h2>
               <p>
                 El presente aviso legal regula el uso del sitio web CLIMATIC, del
-                que es titular Max Efficiency SL. La navegación por el sitio web
+                que es titular CLIMATIC. La navegación por el sitio web
                 atribuye la condición de usuario del mismo e implica la aceptación
                 plena y sin reservas de todas y cada una de las disposiciones
                 incluidas en este Aviso Legal.
@@ -74,7 +74,7 @@ const AvisoLegal = () => {
                 El sitio web, incluyendo a título enunciativo pero no limitativo
                 su programación, edición, compilación y demás elementos necesarios
                 para su funcionamiento, los diseños, logotipos, texto y/o
-                gráficos, son propiedad de Max Efficiency SL o, en su caso,
+                gráficos, son propiedad de CLIMATIC o, en su caso,
                 dispone de licencia o autorización expresa por parte de los
                 autores.
               </p>
@@ -90,7 +90,7 @@ const AvisoLegal = () => {
                 4. Exención de responsabilidades
               </h2>
               <p>
-                Max Efficiency SL se exime de cualquier tipo de responsabilidad
+                CLIMATIC se exime de cualquier tipo de responsabilidad
                 derivada de la información publicada en su sitio web siempre que
                 esta información haya sido manipulada o introducida por un tercero
                 ajeno al mismo.

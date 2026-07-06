@@ -105,7 +105,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <a href="tel:+34603140026">
+            <a href="tel:+34602359972">
               <Button variant="hero" size="xl" className="gap-3">
                 <Phone className="w-5 h-5" />
                 Contactar ahora

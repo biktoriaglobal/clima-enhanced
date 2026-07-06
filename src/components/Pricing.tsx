@@ -269,7 +269,7 @@ const Pricing = () => {
                     </span>
                   </motion.div>
 
-                  <a href="https://api.whatsapp.com/send/?phone=34603140026&text=%C2%A1Hola!%20Me%20interesa%20el%20Ekokai%20DPA35FGX&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="block">
+                  <a href="https://api.whatsapp.com/send/?phone=34602359972&text=%C2%A1Hola!%20Me%20interesa%20el%20Ekokai%20DPA35FGX&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="block">
                     <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                       <Button size="lg" className="w-full gap-2 bg-green-500 hover:bg-green-400 text-white text-lg px-8 py-7 rounded-xl shadow-[0_8px_30px_rgba(34,197,94,0.35)] font-bold">
                         <MessageCircle size={22} />
@@ -346,7 +346,7 @@ const Pricing = () => {
                     </div>
 
                     {/* CTA */}
-                    <a href={`https://api.whatsapp.com/send/?phone=34603140026&text=%C2%A1Hola!%20Me%20interesa%20el%20${encodeURIComponent(offer.brand + ' ' + offer.model)}&type=phone_number&app_absent=0`} target="_blank" rel="noopener noreferrer" className="block">
+                    <a href={`https://api.whatsapp.com/send/?phone=34602359972&text=%C2%A1Hola!%20Me%20interesa%20el%20${encodeURIComponent(offer.brand + ' ' + offer.model)}&type=phone_number&app_absent=0`} target="_blank" rel="noopener noreferrer" className="block">
                       <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                         <Button variant="outline" size="lg" className={`w-full gap-2 border-current/20 hover:${t.badgeBg} hover:text-white transition-all duration-300 ${t.text}`}>
                           <MessageCircle size={16} />
@@ -385,7 +385,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <a href="https://api.whatsapp.com/send/?phone=34603140026&text=%C2%A1Hola!%20Me%20interesa%20la%20limpieza%20anual&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="block">
+            <a href="https://api.whatsapp.com/send/?phone=34602359972&text=%C2%A1Hola!%20Me%20interesa%20la%20limpieza%20anual&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="block">
               <Button variant="outline" size="lg" className="w-full gap-2">
                 <MessageCircle size={18} />
                 Solicitar
@@ -412,7 +412,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <a href="https://api.whatsapp.com/send/?phone=34603140026&text=%C2%A1Hola!%20Me%20interesa%20la%20instalaci%C3%B3n%20b%C3%A1sica&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="block">
+            <a href="https://api.whatsapp.com/send/?phone=34602359972&text=%C2%A1Hola!%20Me%20interesa%20la%20instalaci%C3%B3n%20b%C3%A1sica&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="block">
               <Button variant="hero" size="lg" className="w-full gap-2">
                 <MessageCircle size={18} />
                 Solicitar
