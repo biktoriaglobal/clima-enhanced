@@ -74,8 +74,8 @@ const offers = [
     brand: "FUJITSU",
     model: "ASY35",
     oldPrice: "1.380",
-    newPrice: "900",
-    discount: "35%",
+    newPrice: "950",
+    discount: "31%",
     highlight: "Silencioso",
     features: [
       "Potencia frigorífica 3.5 kW",
@@ -89,8 +89,8 @@ const offers = [
     brand: "MITSUBISHI",
     model: "MSZ-HR35VF",
     oldPrice: "1.870",
-    newPrice: "900",
-    discount: "52%",
+    newPrice: "950",
+    discount: "49%",
     highlight: "Top ventas",
     features: [
       "Potencia frigorífica 3.5 kW",
@@ -104,8 +104,8 @@ const offers = [
     brand: "GREE",
     model: "Pular 12",
     oldPrice: "840",
-    newPrice: "700",
-    discount: "17%",
+    newPrice: "750",
+    discount: "11%",
     highlight: "WiFi",
     features: [
       "Potencia frigorífica 3.5 kW",
@@ -119,8 +119,8 @@ const offers = [
     brand: "DAIKIN",
     model: "Sensira FTXF35C",
     oldPrice: "1.850",
-    newPrice: "950",
-    discount: "49%",
+    newPrice: "1.000",
+    discount: "46%",
     highlight: "Premium",
     features: [
       "Potencia frigorífica 3.5 kW",
